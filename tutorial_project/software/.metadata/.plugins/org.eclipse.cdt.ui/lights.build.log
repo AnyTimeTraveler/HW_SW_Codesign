@@ -1,0 +1,18 @@
+11:25:37 **** Incremental Build of configuration Nios II for project lights ****
+make all 
+Info: Building ../lights_bsp/
+make --no-print-directory -C ../lights_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../lights_bsp//HAL/inc -I../lights_bsp/ -I../lights_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+Info: Linking lights.elf
+nios2-elf-g++  -T'../lights_bsp//linker.x' -msys-crt0='../lights_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../lights_bsp/  -msmallc  -Wl,-Map=lights.map   -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lights.elf obj/default/hello_world_small.o -lm -msys-lib=m
+nios2-elf-insert lights.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x5020 --timestamp 1618562689 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_system --quartus_project_dir "/home/ti/HW_SW_Codesign/tutorial_project" --jdi ../..//output_files/lights.jdi --sopcinfo /home/ti/HW_SW_Codesign/tutorial_project/software/lights_bsp/../../nios_system.sopcinfo
+Info: (lights.elf) 1128 Bytes program size (code + initialized data).
+Info:              7060 Bytes free for stack + heap.
+Info: Creating lights.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source lights.elf >lights.objdump
+[lights build complete]
+
+11:25:38 Build Finished (took 715ms)
+

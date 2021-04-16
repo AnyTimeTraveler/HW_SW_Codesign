@@ -6,7 +6,7 @@
    version="1.0"
    description=""
    tags=""
-   categories="" />
+   categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
    element clk_0
@@ -45,7 +45,7 @@
    {
       datum baseAddress
       {
-         value = "20512";
+         value = "20520";
          type = "String";
       }
    }
@@ -97,6 +97,22 @@
          type = "String";
       }
    }
+   element sysid_qsys_0
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element sysid_qsys_0.control_slave
+   {
+      datum baseAddress
+      {
+         value = "20512";
+         type = "String";
+      }
+   }
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
@@ -111,7 +127,7 @@
  <parameter name="hideFromIPCatalog" value="false" />
  <parameter name="lockedInterfaceDefinition" value="" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="" />
+ <parameter name="projectName" value="lights.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="0" />
  <parameter name="testBenchDutName" value="" />
@@ -120,15 +136,16 @@
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface
-   name="leds"
+   name="pio_leds"
    internal="pio_output.external_connection"
    type="conduit"
    dir="end" />
  <interface
-   name="switches"
+   name="pio_switches"
    internal="pio_input.external_connection"
    type="conduit"
    dir="end" />
+ <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
  <module name="clk_0" kind="clock_source" version="17.0" enabled="1">
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />
@@ -155,7 +172,7 @@
   <parameter name="dataAddrWidth" value="15" />
   <parameter name="dataMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="dataMasterHighPerformanceMapParam" value="" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory.s1' start='0x2000' end='0x4000' type='altera_avalon_onchip_memory2.s1' /><slave name='cpu.debug_mem_slave' start='0x4800' end='0x5000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='pio_input.s1' start='0x5000' end='0x5010' type='altera_avalon_pio.s1' /><slave name='pio_output.s1' start='0x5010' end='0x5020' type='altera_avalon_pio.s1' /><slave name='jtag_uart.avalon_jtag_slave' start='0x5020' end='0x5028' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory.s1' start='0x2000' end='0x4000' type='altera_avalon_onchip_memory2.s1' /><slave name='cpu.debug_mem_slave' start='0x4800' end='0x5000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='pio_input.s1' start='0x5000' end='0x5010' type='altera_avalon_pio.s1' /><slave name='pio_output.s1' start='0x5010' end='0x5020' type='altera_avalon_pio.s1' /><slave name='sysid_qsys_0.control_slave' start='0x5020' end='0x5028' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart.avalon_jtag_slave' start='0x5028' end='0x5030' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
   <parameter name="data_master_high_performance_paddr_base" value="0" />
   <parameter name="data_master_high_performance_paddr_size" value="0" />
   <parameter name="data_master_paddr_base" value="0" />
@@ -392,11 +409,27 @@
   <parameter name="simDrivenValue" value="0" />
   <parameter name="width" value="8" />
  </module>
+ <module
+   name="sysid_qsys_0"
+   kind="altera_avalon_sysid_qsys"
+   version="17.0"
+   enabled="1">
+  <parameter name="id" value="0" />
+ </module>
  <connection
    kind="avalon"
    version="17.0"
    start="cpu.data_master"
    end="jtag_uart.avalon_jtag_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x5028" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="17.0"
+   start="cpu.data_master"
+   end="sysid_qsys_0.control_slave">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x5020" />
   <parameter name="defaultConnection" value="false" />
@@ -459,6 +492,7 @@
  <connection kind="clock" version="17.0" start="clk_0.clk" end="pio_input.clk" />
  <connection kind="clock" version="17.0" start="clk_0.clk" end="pio_output.clk" />
  <connection kind="clock" version="17.0" start="clk_0.clk" end="jtag_uart.clk" />
+ <connection kind="clock" version="17.0" start="clk_0.clk" end="sysid_qsys_0.clk" />
  <connection
    kind="clock"
    version="17.0"
@@ -487,12 +521,12 @@
    kind="reset"
    version="17.0"
    start="clk_0.clk_reset"
-   end="onchip_memory.reset1" />
+   end="sysid_qsys_0.reset" />
  <connection
    kind="reset"
    version="17.0"
-   start="cpu.debug_reset_request"
-   end="clk_0.clk_in_reset" />
+   start="clk_0.clk_reset"
+   end="onchip_memory.reset1" />
  <connection
    kind="reset"
    version="17.0"
@@ -513,6 +547,11 @@
    version="17.0"
    start="cpu.debug_reset_request"
    end="jtag_uart.reset" />
+ <connection
+   kind="reset"
+   version="17.0"
+   start="cpu.debug_reset_request"
+   end="sysid_qsys_0.reset" />
  <connection
    kind="reset"
    version="17.0"
