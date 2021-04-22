@@ -20,3 +20,29 @@
 
   	__builtin_ldwio (((void *)(((alt_u8*)(0x5000)) + (((0)) * (32/8)))));
 
+
+    _________________________________________________________________________________
+Notizen die sich Markus noch Donnerstg Nacht gemacht hat
+
+    Beim draufspielen
+    - Byte order --> ISA
+    - Data aligment --> Compiler
+
+    MEmorimapped I/O
+     - I/O Register werden in dem Hauptapeicher-Adressraum abgebildet
+
+     .bss --> datensegment für statische werte die mit null werten gefüllt sind
+
+     flashspeicher ist nicht so schnell wie sd-ram
+     - ab 100 Mhz wird nicht mehr vom Flash gebootet
+
+     FPGA und NIOS
+     - booten und laufen von volatile memory
+
+     board support package enthält infos über hardware und adressen
+     - schnittstelle zwischen hard und software
+     - z.B wo heap stack und .bss liegen
+     - wenn die hardware verändert wurde muss ein neues geschrieben werden
+     - namen die wir im quisis festlegen (für hardware) finden wir im boardsupport package wider
+     - Wie der Bootloader auszusehen hat
+     - usw ...
