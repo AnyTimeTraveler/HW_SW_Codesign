@@ -1,0 +1,11 @@
+
+
+
+21.04
++ Reset-Vector in Flash oder SRAM -> Warum?
++ Gemeinsamkeiten und Unterschiede Boot-Loader und Boot-Copier?
++ Was bedeutet XIP? Anwendungsbeispiel(e)?
++ Erläutern Sie die Aufgabe von crt0.
++ Aufgabe und Inhalt eines BSP?
++ Unterschied und Gemeinsamkeiten von BSP und HAL?
++ ORG
