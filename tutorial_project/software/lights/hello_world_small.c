@@ -9,10 +9,10 @@ int main() {
 
 	/*Endlosschleife*/
 	while (1) {
-		/*Schaltereinlesen*/
+		/*Schalter einlesen*/
 		ucTemp = IORD_ALTERA_AVALON_PIO_DATA(PIO_INPUT_BASE);
 		if (ucTemp != ucSwitches) {
-			/*LEDssetzen*/
+			/*LEDs setzen*/
 			ucSwitches = ucTemp;
 			alt_printf("Input:0x%x\n", ucSwitches);
 			IOWR_ALTERA_AVALON_PIO_DATA(PIO_OUTPUT_BASE, ucSwitches);

@@ -70,5 +70,5 @@ begin
 	LEDG(8) <= counter_output(20 + to_integer(offset));
 end process;
 	
-	LEDG(7 DOWNTO 0) <= pio_leds;
+LEDG(7 DOWNTO 0) <= pio_leds;
 END structure;
