@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+newSoftwareExampleWizardPage.defaultLocation=/home/ti/HW_SW_Codesign/tutorial_project/software/lights
+newSoftwareExampleWizardPage.sopcinfoFile=/home/ti/HW_SW_Codesign/tutorial_project/nios_system.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=/home/ti/HW_SW_Codesign/tutorial_project/software/lights_bsp
