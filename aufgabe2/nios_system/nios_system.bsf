@@ -48,8 +48,8 @@ agreement for further details.
 	(port
 		(pt 0 112)
 		(output)
-		(text "pio_leds_export[7..0]" (rect 0 0 82 12)(font "Arial" (font_size 8)))
-		(text "pio_leds_export[7..0]" (rect 4 101 130 112)(font "Arial" (font_size 8)))
+		(text "pio_leds_export[15..0]" (rect 0 0 86 12)(font "Arial" (font_size 8)))
+		(text "pio_leds_export[15..0]" (rect 4 101 136 112)(font "Arial" (font_size 8)))
 		(line (pt 0 112)(pt 144 112)(line_width 3))
 	)
 	(port

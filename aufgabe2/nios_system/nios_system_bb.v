@@ -15,7 +15,7 @@ module nios_system (
 	sdram_wire_we_n);	
 
 	input		clk_clk;
-	output	[7:0]	pio_leds_export;
+	output	[15:0]	pio_leds_export;
 	input	[7:0]	pio_switches_export;
 	input		reset_reset_n;
 	output	[12:0]	sdram_wire_addr;

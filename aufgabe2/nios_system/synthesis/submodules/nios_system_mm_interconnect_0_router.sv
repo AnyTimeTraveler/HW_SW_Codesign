@@ -134,19 +134,19 @@ module nios_system_mm_interconnect_0_router
     // Figure out the number of bits to mask off for each slave span
     // during address decoding
     // -------------------------------------------------------
-    localparam PAD0 = log2ceil(64'h4000 - 64'h2000); 
-    localparam PAD1 = log2ceil(64'h5000 - 64'h4800); 
-    localparam PAD2 = log2ceil(64'h5010 - 64'h5000); 
-    localparam PAD3 = log2ceil(64'h5020 - 64'h5010); 
-    localparam PAD4 = log2ceil(64'h5028 - 64'h5020); 
-    localparam PAD5 = log2ceil(64'h5030 - 64'h5028); 
-    localparam PAD6 = log2ceil(64'h10000000 - 64'h8000000); 
+    localparam PAD0 = log2ceil(64'h8000000 - 64'h0); 
+    localparam PAD1 = log2ceil(64'h8004000 - 64'h8002000); 
+    localparam PAD2 = log2ceil(64'h8005000 - 64'h8004800); 
+    localparam PAD3 = log2ceil(64'h8005010 - 64'h8005000); 
+    localparam PAD4 = log2ceil(64'h8005020 - 64'h8005010); 
+    localparam PAD5 = log2ceil(64'h8005028 - 64'h8005020); 
+    localparam PAD6 = log2ceil(64'h8005030 - 64'h8005028); 
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
     // large or too small, we use the address field width instead.
     // -------------------------------------------------------
-    localparam ADDR_RANGE = 64'h10000000;
+    localparam ADDR_RANGE = 64'h8005030;
     localparam RANGE_ADDR_WIDTH = log2ceil(ADDR_RANGE);
     localparam OPTIMIZED_ADDR_H = (RANGE_ADDR_WIDTH > PKT_ADDR_W) ||
                                   (RANGE_ADDR_WIDTH == 0) ?
@@ -199,46 +199,46 @@ module nios_system_mm_interconnect_0_router
         // Sets the channel and destination ID based on the address
         // --------------------------------------------------
 
-    // ( 0x2000 .. 0x4000 )
-    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 28'h2000   ) begin
+    // ( 0x0 .. 0x8000000 )
+    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 28'h0   ) begin
+            src_channel = 7'b1000000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
+    end
+
+    // ( 0x8002000 .. 0x8004000 )
+    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 28'h8002000   ) begin
             src_channel = 7'b0001000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
     end
 
-    // ( 0x4800 .. 0x5000 )
-    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 28'h4800   ) begin
+    // ( 0x8004800 .. 0x8005000 )
+    if ( {address[RG:PAD2],{PAD2{1'b0}}} == 28'h8004800   ) begin
             src_channel = 7'b0000100;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
     end
 
-    // ( 0x5000 .. 0x5010 )
-    if ( {address[RG:PAD2],{PAD2{1'b0}}} == 28'h5000  && read_transaction  ) begin
+    // ( 0x8005000 .. 0x8005010 )
+    if ( {address[RG:PAD3],{PAD3{1'b0}}} == 28'h8005000  && read_transaction  ) begin
             src_channel = 7'b0100000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
     end
 
-    // ( 0x5010 .. 0x5020 )
-    if ( {address[RG:PAD3],{PAD3{1'b0}}} == 28'h5010   ) begin
+    // ( 0x8005010 .. 0x8005020 )
+    if ( {address[RG:PAD4],{PAD4{1'b0}}} == 28'h8005010   ) begin
             src_channel = 7'b0010000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
     end
 
-    // ( 0x5020 .. 0x5028 )
-    if ( {address[RG:PAD4],{PAD4{1'b0}}} == 28'h5020  && read_transaction  ) begin
+    // ( 0x8005020 .. 0x8005028 )
+    if ( {address[RG:PAD5],{PAD5{1'b0}}} == 28'h8005020  && read_transaction  ) begin
             src_channel = 7'b0000010;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 6;
     end
 
-    // ( 0x5028 .. 0x5030 )
-    if ( {address[RG:PAD5],{PAD5{1'b0}}} == 28'h5028   ) begin
+    // ( 0x8005028 .. 0x8005030 )
+    if ( {address[RG:PAD6],{PAD6{1'b0}}} == 28'h8005028   ) begin
             src_channel = 7'b0000001;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
-    end
-
-    // ( 0x8000000 .. 0x10000000 )
-    if ( {address[RG:PAD6],{PAD6{1'b0}}} == 28'h8000000   ) begin
-            src_channel = 7'b1000000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
     end
 
 end
