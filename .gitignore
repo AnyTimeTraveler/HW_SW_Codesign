@@ -66,4 +66,7 @@
 */*_sim/
 */output_files/
 PLLJ_PLLSPE_INFO.txt
+*.elf
+*.objdump
+*.map
 

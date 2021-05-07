@@ -1,0 +1,10 @@
+lsusb | grep Blaster
+ls -la /dev/bus/usb/001/
+
+dmesg|tail
+
+killall jtagd
+jtagconfig
+
+./jtagd --foreground --debug
+
