@@ -148,7 +148,7 @@
  <parameter name="hideFromIPCatalog" value="false" />
  <parameter name="lockedInterfaceDefinition" value="" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="lights.qpf" />
+ <parameter name="projectName" value="aufgabe2.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="0" />
  <parameter name="testBenchDutName" value="" />
@@ -169,7 +169,7 @@
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
  <interface name="sdram_wire" internal="sdram.wire" type="conduit" dir="end" />
  <module name="clk_0" kind="clock_source" version="17.0" enabled="1">
-  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequency" value="100000000" />
   <parameter name="clockFrequencyKnown" value="true" />
   <parameter name="inputClockFrequency" value="0" />
   <parameter name="resetSynchronousEdges" value="NONE" />
@@ -183,7 +183,7 @@
   <parameter name="breakOffset" value="32" />
   <parameter name="breakSlave" value="None" />
   <parameter name="cdx_enabled" value="false" />
-  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequency" value="100000000" />
   <parameter name="cpuArchRev" value="1" />
   <parameter name="cpuID" value="0" />
   <parameter name="cpuReset" value="false" />
@@ -359,7 +359,7 @@
    enabled="1">
   <parameter name="allowMultipleConnections" value="false" />
   <parameter name="avalonSpec" value="2.0" />
-  <parameter name="clkFreq" value="50000000" />
+  <parameter name="clkFreq" value="100000000" />
   <parameter name="hubInstanceID" value="0" />
   <parameter name="readBufferDepth" value="64" />
   <parameter name="readIRQThreshold" value="8" />
@@ -407,7 +407,7 @@
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="false" />
-  <parameter name="clockRate" value="50000000" />
+  <parameter name="clockRate" value="100000000" />
   <parameter name="direction" value="Input" />
   <parameter name="edgeType" value="RISING" />
   <parameter name="generateIRQ" value="false" />
@@ -421,7 +421,7 @@
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="false" />
-  <parameter name="clockRate" value="50000000" />
+  <parameter name="clockRate" value="100000000" />
   <parameter name="direction" value="Output" />
   <parameter name="edgeType" value="RISING" />
   <parameter name="generateIRQ" value="false" />
@@ -443,7 +443,7 @@
   <parameter name="TRP" value="20.0" />
   <parameter name="TWR" value="14.0" />
   <parameter name="casLatency" value="3" />
-  <parameter name="clockRate" value="50000000" />
+  <parameter name="clockRate" value="100000000" />
   <parameter name="columnWidth" value="10" />
   <parameter name="componentName" value="$${FILENAME}_sdram" />
   <parameter name="dataWidth" value="32" />

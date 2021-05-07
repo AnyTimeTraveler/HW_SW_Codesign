@@ -3,6 +3,7 @@
 	<name>aufgabe2</name>
 	<comment></comment>
 	<projects>
+		<project>aufgabe2_bsp</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
