@@ -1,18 +1,9 @@
-15:10:26 **** Incremental Build of configuration Nios II for project aufgabe2 ****
+10:51:41 **** Incremental Build of configuration Nios II for project aufgabe2 ****
 make all 
 Info: Building ../aufgabe2_bsp/
-Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
 make --no-print-directory -C ../aufgabe2_bsp/
-nios2-elf-gcc -xc -MP -MMD -c -I../aufgabe2_bsp//HAL/inc -I../aufgabe2_bsp/ -I../aufgabe2_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
 [BSP build complete]
-Info: Linking aufgabe2.elf
-nios2-elf-g++ -T'../aufgabe2_bsp//linker.x' -msys-crt0='../aufgabe2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../aufgabe2_bsp/ -msmallc  -Wl,-Map=aufgabe2.map   -Os -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o aufgabe2.elf obj/default/hello_world_small.o -lm -msys-lib=m
-nios2-elf-insert aufgabe2.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x8005020 --timestamp 1620378971 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_system --quartus_project_dir "/home/simon/projects/HW_SW_Codesign/aufgabe2" --sopcinfo /home/simon/projects/HW_SW_Codesign/aufgabe2/software/aufgabe2_bsp/../../nios_system.sopcinfo
-Info: (aufgabe2.elf) 2560 Bytes program size (code + initialized data).
-Info:                8192 Bytes free for stack + heap.
-Info: Creating aufgabe2.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source aufgabe2.elf >aufgabe2.objdump
 [aufgabe2 build complete]
 
-15:10:26 Build Finished (took 309ms)
+10:51:41 Build Finished (took 514ms)
 
