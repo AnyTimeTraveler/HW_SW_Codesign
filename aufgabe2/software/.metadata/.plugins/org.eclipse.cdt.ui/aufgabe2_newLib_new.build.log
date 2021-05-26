@@ -1,0 +1,9 @@
+11:26:46 **** Incremental Build of configuration Nios II for project aufgabe2_newLib_new ****
+make all 
+Info: Building ../aufgabe2_newLib_new_bsp/
+make --no-print-directory -C ../aufgabe2_newLib_new_bsp/
+[BSP build complete]
+[aufgabe2_newLib_new build complete]
+
+11:26:46 Build Finished (took 514ms)
+
