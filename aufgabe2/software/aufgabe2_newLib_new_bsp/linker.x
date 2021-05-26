@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'nios_system'
  * SOPC Builder design path: ../../nios_system.sopcinfo
  *
- * Generated: Fri May 21 11:04:46 CEST 2021
+ * Generated: Wed May 26 08:41:48 CEST 2021
  */
 
 /*
@@ -317,7 +317,6 @@ SECTIONS
         PROVIDE (_alt_partition_sdram_end = ABSOLUTE(.));
         _end = ABSOLUTE(.);
         end = ABSOLUTE(.);
-        __alt_stack_base = ABSOLUTE(.);
     } > sdram
 
     PROVIDE (_alt_partition_sdram_load_addr = LOADADDR(.sdram));
@@ -335,6 +334,7 @@ SECTIONS
         *(.onchip_memory .onchip_memory. onchip_memory.*)
         . = ALIGN(4);
         PROVIDE (_alt_partition_onchip_memory_end = ABSOLUTE(.));
+        __alt_stack_base = ABSOLUTE(.);
     } > onchip_memory
 
     PROVIDE (_alt_partition_onchip_memory_load_addr = LOADADDR(.onchip_memory));
@@ -386,7 +386,7 @@ SECTIONS
 /*
  * Don't override this, override the __alt_stack_* symbols instead.
  */
-__alt_data_end = 0x8000000;
+__alt_data_end = 0x8004000;
 
 /*
  * The next two symbols define the location of the default stack.  You can

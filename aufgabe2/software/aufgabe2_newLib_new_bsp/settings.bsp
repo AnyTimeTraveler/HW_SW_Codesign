@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>May 21, 2021 11:07:35 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1621588055102</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>May 26, 2021 8:41:48 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1622011308469</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/ti/HW_SW_Codesign/aufgabe2/software/aufgabe2_newLib_new_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../nios_system.sopcinfo</SopcDesignFile>
@@ -956,6 +956,6 @@
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.stack</sectionName>
-                <regionName>sdram</regionName>
+                <regionName>onchip_memory</regionName>
         </LinkerSection>
 </sch:Settings>
