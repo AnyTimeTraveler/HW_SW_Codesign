@@ -1,23 +1,33 @@
 1. Beschreiben Sie den Unterschied der Integration der PLL für das SDRAM
 (a) als Komponente in Qsys
   -
-
-
 (b) als im Top-Level eingebundene Entität
-
+  -
 2. Wodurch wird die Anzahl der PLLs Ihres Systems begrenzt?
+
+  - Durch die anzahl an verbauten PLLs in der FPGA
 
 3. Was passiert, wenn das SDRAM nicht mit einem vorauseilenden Taktsignal
    betrieben wird?
 
-   -  
+   -  Der Chip ist pysikalisch weiter entfertn und das Vorauseilende dient dazu das die clock
+      auf jeden fall vor den daten beim Speicher ankommt. Ohne Vorauseilendes Signal kann es
+      zu Speicherfehlern kommen.
 
 
 4. Wodurch unterscheidet sich ein SRAM- von einem SDRAM-Controller?
 
+  - Sram ist nicht flüchtig
+  - Ein SDRAM-Controler muss den Speicher regelmäßig auffrischen.
+
 5. Das SDRAM hat eine Größe von 128 MByte. In Aufgabe 2.3 haben wir jedoch
    nur 112 MByte genutzt - warum?
+
+   - Jedes Datensegment besitzt am anfang einen Header. Dieser benötigt Platz
 
 6. Für ein fiktives Entwicklungsprojekt ist es notwendig, die Kosten des FPGA
    durch Reduzierung der Anzahl der Pins zu senken. Welche Möglichkeiten bestehen,
    um trotzdem beispielsweise ein zusätzliches SRAM und ein FLASHBaustein einzubinden?
+
+   - Externer SRAM/Flash controler serieller anschluss
+   - Daisy Chain (zwei SRAM-chips hintereinander)
