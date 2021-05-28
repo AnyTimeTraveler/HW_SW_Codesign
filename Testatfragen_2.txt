@@ -1,8 +1,11 @@
 1. Beschreiben Sie den Unterschied der Integration der PLL für das SDRAM
 (a) als Komponente in Qsys
-  -
+  - bei multicore kriegt jeder eine Pll
+
 (b) als im Top-Level eingebundene Entität
-  -
+  - Bei multicore kann man die Pll aufteilen
+
+
 2. Wodurch wird die Anzahl der PLLs Ihres Systems begrenzt?
 
   - Durch die anzahl an verbauten PLLs in der FPGA
@@ -10,9 +13,8 @@
 3. Was passiert, wenn das SDRAM nicht mit einem vorauseilenden Taktsignal
    betrieben wird?
 
-   -  Der Chip ist pysikalisch weiter entfertn und das Vorauseilende dient dazu das die clock
-      auf jeden fall vor den daten beim Speicher ankommt. Ohne Vorauseilendes Signal kann es
-      zu Speicherfehlern kommen.
+   - Wegen der Zeit die der SDRAM zur Auffrischung benötigt (Setup und Hold Zeit) 
+
 
 
 4. Wodurch unterscheidet sich ein SRAM- von einem SDRAM-Controller?
@@ -31,3 +33,4 @@
 
    - Externer SRAM/Flash controler serieller anschluss
    - Daisy Chain (zwei SRAM-chips hintereinander)
+   - Wortbreite des Speichers/Datenleitung ändern
