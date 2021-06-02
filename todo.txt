@@ -1,3 +1,4 @@
-1. Aufgabe 2 Testatfragen nachfrage
-2. Aufgabe 3 LCD weiter machen
+1. Aufgabe 3 UART geht nicht
+2. Aufgabe 3 Fragen beantworten
+3. Aufgabe 4 machen
 

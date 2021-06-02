@@ -1,9 +1,0 @@
-11:26:59 **** Build of configuration Nios II for project aufgabe3_new ****
-make all 
-Info: Building ../aufgabe3_new_bsp/
-make --no-print-directory -C ../aufgabe3_new_bsp/
-[BSP build complete]
-[aufgabe3_new build complete]
-
-11:27:00 Build Finished (took 519ms)
-

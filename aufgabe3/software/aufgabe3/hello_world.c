@@ -33,8 +33,7 @@ int main() {
 //	lcd_init();
 //	lcd_test();
 
-
-	// 3 Systeminformationen
+// 3 Systeminformationen
 	printf("Read: ");
 	uint32_t sys_id = IORD_32DIRECT(SYSID_QSYS_BASE, 0);
 	uint32_t sys_timestamp = IORD_32DIRECT(SYSID_QSYS_BASE, 4);
@@ -42,7 +41,6 @@ int main() {
 
 	printf("SysID: %lx\n", sys_id);
 	printf("SysTS: %lx\n", sys_timestamp);
-
 
 	// 4 Implementation LCD
 	printf("LCD : ");
@@ -124,19 +122,13 @@ int lcd_test(void) {
 	return (0);
 }
 
-void lcd_print(uint32_t sys_id, uint32_t sys_timestamp){
-	char line_id[16];
-	char line_ts[16];
-
-	sprintf(line_id, "ID:   0x%lx", sys_id);
-	sprintf(line_ts, "Time: 0x%lx", sys_timestamp);
-
+void lcd_print(uint32_t sys_id, uint32_t sys_timestamp) {
 	FILE * lcd = fopen(LCD_NAME, "w");
 
-	if(lcd) {
+	if (lcd) {
 		fprintf(lcd, "ID:   0x%lx\n", sys_id);
 		fprintf(lcd, "Time: 0x%lx\n", sys_timestamp);
-		fclose (lcd);
+		fclose(lcd);
 	} else {
 		printf("Couldn't open LCD!\n");
 	}
@@ -144,12 +136,20 @@ void lcd_print(uint32_t sys_id, uint32_t sys_timestamp){
 }
 
 void uart_print(uint32_t sys_id, uint32_t sys_timestamp) {
-	FILE * uart = fopen(RS232_NAME, "r+");
+	FILE * uart = fopen(RS232_NAME, "w");
 
-	if(uart) {
+	if (uart) {
+//		char data[32];
+//		for (int i = 0; i < 32; ++i) {
+//			data[i] = 15;
+//		}
+//		fwrite(&data, sizeof(char), 32, uart);
+
+//		fprintf(uart, "01234567890");
 		fprintf(uart, "ID:   0x%lx\n", sys_id);
 		fprintf(uart, "Time: 0x%lx\n", sys_timestamp);
-		fclose (uart);
+		fflush(uart);
+		fclose(uart);
 	} else {
 		printf("Couldn't open UART!\n");
 	}

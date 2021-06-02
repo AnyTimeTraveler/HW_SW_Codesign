@@ -1,9 +1,15 @@
 
 module nios_system (
 	clk_clk,
+	lcd_RS,
+	lcd_RW,
+	lcd_data,
+	lcd_E,
 	pio_leds_export,
 	pio_switches_export,
 	reset_reset_n,
+	rs232_RXD,
+	rs232_TXD,
 	sdram_wire_addr,
 	sdram_wire_ba,
 	sdram_wire_cas_n,
@@ -12,18 +18,18 @@ module nios_system (
 	sdram_wire_dq,
 	sdram_wire_dqm,
 	sdram_wire_ras_n,
-	sdram_wire_we_n,
-	rs232_RXD,
-	rs232_TXD,
-	lcd_RS,
-	lcd_RW,
-	lcd_data,
-	lcd_E);	
+	sdram_wire_we_n);	
 
 	input		clk_clk;
+	output		lcd_RS;
+	output		lcd_RW;
+	inout	[7:0]	lcd_data;
+	output		lcd_E;
 	output	[15:0]	pio_leds_export;
 	input	[7:0]	pio_switches_export;
 	input		reset_reset_n;
+	input		rs232_RXD;
+	output		rs232_TXD;
 	output	[12:0]	sdram_wire_addr;
 	output	[1:0]	sdram_wire_ba;
 	output		sdram_wire_cas_n;
@@ -33,10 +39,4 @@ module nios_system (
 	output	[3:0]	sdram_wire_dqm;
 	output		sdram_wire_ras_n;
 	output		sdram_wire_we_n;
-	input		rs232_RXD;
-	output		rs232_TXD;
-	output		lcd_RS;
-	output		lcd_RW;
-	inout	[7:0]	lcd_data;
-	output		lcd_E;
 endmodule

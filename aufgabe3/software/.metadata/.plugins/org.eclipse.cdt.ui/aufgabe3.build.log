@@ -1,9 +1,18 @@
-11:26:19 **** Incremental Build of configuration Nios II for project aufgabe3 ****
+11:54:33 **** Incremental Build of configuration Nios II for project aufgabe3 ****
 make all 
 Info: Building ../aufgabe3_bsp/
 make --no-print-directory -C ../aufgabe3_bsp/
 [BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../aufgabe3_bsp//HAL/inc -I../aufgabe3_bsp/ -I../aufgabe3_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking aufgabe3.elf
+nios2-elf-g++  -T'../aufgabe3_bsp//linker.x' -msys-crt0='../aufgabe3_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../aufgabe3_bsp/   -Wl,-Map=aufgabe3.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o aufgabe3.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert aufgabe3.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 3735928559 --sidp 0x8001050 --timestamp 1622626168 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_system --quartus_project_dir "/home/ti/HW_SW_Codesign/aufgabe3" --jdi ../..//output_files/aufgabe3.jdi --sopcinfo /home/ti/HW_SW_Codesign/aufgabe3/software/aufgabe3_bsp/../../nios_system.sopcinfo
+Info: (aufgabe3.elf) 93 KBytes program size (code + initialized data).
+Info:                130971 KBytes free for stack + heap.
+Info: Creating aufgabe3.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source aufgabe3.elf >aufgabe3.objdump
 [aufgabe3 build complete]
 
-11:26:19 Build Finished (took 464ms)
+11:54:34 Build Finished (took 865ms)
 
