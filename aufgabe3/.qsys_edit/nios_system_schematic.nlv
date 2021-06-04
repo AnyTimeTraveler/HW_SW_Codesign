@@ -13,16 +13,16 @@ preplace inst nios_system.sdram -pg 1 -lvl 3 -y 530
 preplace inst nios_system.jtag_uart -pg 1 -lvl 3 -y 150
 preplace inst nios_system.cpu.cpu -pg 1
 preplace inst nios_system.clk_0 -pg 1 -lvl 1 -y 200
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)pio_output.external_connection,(SLAVE)nios_system.pio_leds) 1 0 3 NJ 360 NJ 360 NJ
-preplace netloc FAN_OUT<net_container>nios_system</net_container>(SLAVE)jtag_uart.clk,(MASTER)clk_0.clk,(SLAVE)pio_input.clk,(SLAVE)pio_output.clk,(SLAVE)sysid_qsys.clk,(SLAVE)cpu.clk,(SLAVE)rs232.clk,(SLAVE)lcd.clk,(SLAVE)sdram.clk) 1 1 2 320 620 740
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)nios_system.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.pio_leds,(SLAVE)pio_output.external_connection) 1 0 3 NJ 360 NJ 360 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.rs232,(SLAVE)rs232.external_interface) 1 0 3 NJ 80 NJ 80 NJ
 preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.lcd,(SLAVE)lcd.external) 1 0 3 NJ 680 NJ 680 NJ
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)rs232.external_interface,(SLAVE)nios_system.rs232) 1 0 3 NJ 80 NJ 80 NJ
-preplace netloc INTERCONNECT<net_container>nios_system</net_container>(SLAVE)sdram.reset,(SLAVE)sysid_qsys.reset,(SLAVE)rs232.reset,(SLAVE)pio_input.reset,(MASTER)clk_0.clk_reset,(SLAVE)cpu.reset,(SLAVE)lcd.reset,(SLAVE)jtag_uart.reset,(SLAVE)pio_output.reset,(MASTER)cpu.debug_reset_request) 1 1 2 300 700 760
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.sdram_wire,(SLAVE)sdram.wire) 1 0 3 NJ 600 NJ 600 NJ
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
-preplace netloc FAN_OUT<net_container>nios_system</net_container>(MASTER)cpu.irq,(SLAVE)jtag_uart.irq,(SLAVE)rs232.interrupt) 1 2 1 720
-preplace netloc INTERCONNECT<net_container>nios_system</net_container>(SLAVE)jtag_uart.avalon_jtag_slave,(MASTER)cpu.instruction_master,(SLAVE)cpu.debug_mem_slave,(SLAVE)sdram.s1,(SLAVE)sysid_qsys.control_slave,(SLAVE)lcd.control_slave,(SLAVE)pio_output.s1,(MASTER)cpu.data_master,(SLAVE)pio_input.s1,(SLAVE)rs232.avalon_rs232_slave) 1 1 2 340 640 700
+preplace netloc FAN_OUT<net_container>nios_system</net_container>(SLAVE)jtag_uart.irq,(SLAVE)rs232.interrupt,(MASTER)cpu.irq) 1 2 1 720
+preplace netloc INTERCONNECT<net_container>nios_system</net_container>(SLAVE)jtag_uart.avalon_jtag_slave,(MASTER)cpu.data_master,(SLAVE)sysid_qsys.control_slave,(SLAVE)rs232.avalon_rs232_slave,(SLAVE)sdram.s1,(SLAVE)pio_input.s1,(SLAVE)cpu.debug_mem_slave,(MASTER)cpu.instruction_master,(SLAVE)lcd.control_slave,(SLAVE)pio_output.s1) 1 1 2 340 640 700
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)sdram.wire,(SLAVE)nios_system.sdram_wire) 1 0 3 NJ 600 NJ 600 NJ
+preplace netloc INTERCONNECT<net_container>nios_system</net_container>(MASTER)clk_0.clk_reset,(SLAVE)sdram.reset,(MASTER)cpu.debug_reset_request,(SLAVE)lcd.reset,(SLAVE)jtag_uart.reset,(SLAVE)pio_output.reset,(SLAVE)cpu.reset,(SLAVE)pio_input.reset,(SLAVE)sysid_qsys.reset,(SLAVE)rs232.reset) 1 1 2 300 700 760
 preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)pio_input.external_connection,(SLAVE)nios_system.pio_switches) 1 0 3 NJ 460 NJ 460 NJ
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)clk_0.clk_in,(SLAVE)nios_system.clk) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>nios_system</net_container>(SLAVE)pio_input.clk,(MASTER)clk_0.clk,(SLAVE)lcd.clk,(SLAVE)jtag_uart.clk,(SLAVE)sysid_qsys.clk,(SLAVE)pio_output.clk,(SLAVE)cpu.clk,(SLAVE)sdram.clk,(SLAVE)rs232.clk) 1 1 2 320 620 740
 levelinfo -pg 1 0 90 950
 levelinfo -hier nios_system 100 130 460 790 940
