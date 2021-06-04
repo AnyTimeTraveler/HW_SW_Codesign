@@ -1,0 +1,422 @@
+!SESSION 2021-06-04 11:54:10.001 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization /opt/altera/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -data /home/ti/HW_SW_Codesign/aufgabe4/software -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization /opt/altera/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.ui 2 0 2021-06-04 11:54:11.418
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-06-04 11:54:11.418
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+
+!ENTRY org.eclipse.ui 2 0 2021-06-04 11:54:11.818
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-06-04 11:54:11.818
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-06-04 11:55:01.717
+!MESSAGE Indexed 'aufgabe4_bsp' (82 sources, 144 headers) in 3.35 sec: 4,870 declarations; 8,060 references; 63 unresolved inclusions; 3 syntax errors; 129 unresolved names (0.99%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-06-04 11:55:03.139
+!MESSAGE Indexed 'aufgabe4' (1 sources, 21 headers) in 0.09 sec: 983 declarations; 1,599 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.jface 2 0 2021-06-04 11:56:13.607
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-06-04 11:56:13.607
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Open an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@11a29c0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Open an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@11a29c0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-06-04 11:56:13.607
+!MESSAGE A conflict occurred for F4:
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1fc4b8d6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1fc4b8d6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-06-04 11:56:13.607
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@77185a2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@77185a2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-06-04 11:56:13.607
+!MESSAGE A conflict occurred for ALT+CTRL+I:
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2dbc66f0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2dbc66f0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-06-04 11:56:13.607
+!MESSAGE A conflict occurred for CTRL+SHIFT+G:
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7d381eae,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7d381eae,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-06-04 11:56:13.607
+!MESSAGE A conflict occurred for CTRL+G:
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@47800bd7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@47800bd7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-06-04 11:56:13.607
+!MESSAGE A conflict occurred for ALT+CTRL+H:
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Open the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4c57ca10,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Open the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4c57ca10,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-06-04 11:56:13.607
+!MESSAGE A conflict occurred for CTRL+SHIFT+H:
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@212be8c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@212be8c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-06-04 11:56:13.607
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3fe21d0e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3fe21d0e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 12:27:19.829
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --stop --sidp=0x21090 --id=0xdeadaffe --timestamp=1622800341]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 12:27:21.461
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --go --sidp=0x21090 --id=0xdeadaffe --timestamp=1622800341 /home/ti/HW_SW_Codesign/aufgabe4/software/aufgabe4/aufgabe4.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 12:28:11.007
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [2-1.6]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 12:28:11.205
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --stop --sidp=0x21090 --id=0xdeadaffe --timestamp=1622800341]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 12:28:12.795
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --go --sidp=0x21090 --id=0xdeadaffe --timestamp=1622800341 /home/ti/HW_SW_Codesign/aufgabe4/software/aufgabe4/aufgabe4.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 12:28:20.916
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [2-1.6]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 12:28:21.121
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --stop --sidp=0x21090 --id=0xdeadaffe --timestamp=1622800341]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 12:28:22.744
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --go --sidp=0x21090 --id=0xdeadaffe --timestamp=1622800341 /home/ti/HW_SW_Codesign/aufgabe4/software/aufgabe4/aufgabe4.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 12:28:48.767
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --stop --sidp=0x21090 --id=0xdeadaffe --timestamp=1622800341]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 12:28:50.356
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --go --sidp=0x21090 --id=0xdeadaffe --timestamp=1622800341 /home/ti/HW_SW_Codesign/aufgabe4/software/aufgabe4/aufgabe4.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 12:29:57.582
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [2-1.6]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 12:29:57.783
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --stop --sidp=0x21090 --id=0xdeadaffe --timestamp=1622800341]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 12:29:59.398
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --go --sidp=0x21090 --id=0xdeadaffe --timestamp=1622800341 /home/ti/HW_SW_Codesign/aufgabe4/software/aufgabe4/aufgabe4.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 12:30:15.496
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [2-1.6]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 12:30:15.698
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --stop --sidp=0x21090 --id=0xdeadaffe --timestamp=1622800341]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 12:30:17.287
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --go --sidp=0x21090 --id=0xdeadaffe --timestamp=1622800341 /home/ti/HW_SW_Codesign/aufgabe4/software/aufgabe4/aufgabe4.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 12:55:06.283
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [2-1.6]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 12:55:06.483
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --stop --sidp=0x21090 --id=0xdeadaffe --timestamp=1622800341]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 12:55:08.089
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --go --sidp=0x21090 --id=0xdeadaffe --timestamp=1622800341 /home/ti/HW_SW_Codesign/aufgabe4/software/aufgabe4/aufgabe4.elf]
+
+!ENTRY org.eclipse.jface 2 0 2021-06-04 12:55:21.718
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-06-04 12:55:21.718
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.eof,EOF,
+		Send end of file,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7d42cc97,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@40584aff,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-06-04 12:59:53.045
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System ID mismatch - connected: "0x0", expected: "0xdeadaffe". 
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:607)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-06-04 12:59:53.049
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System ID mismatch - connected: "0x0", expected: "0xdeadaffe". 
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:607)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-06-04 13:04:23.908
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System ID mismatch - connected: "0x0", expected: "0xdeadaffe". 
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:607)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-06-04 13:04:23.909
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System ID mismatch - connected: "0x0", expected: "0xdeadaffe". 
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:607)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:05:35.930
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --stop --sidp=0x21048 --id=0xdeadaffe --timestamp=1622804498]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:05:37.523
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --go --sidp=0x21048 --id=0xdeadaffe --timestamp=1622804498 /home/ti/HW_SW_Codesign/aufgabe4/software/aufgabe4/aufgabe4.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:06:14.461
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [2-1.6]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:06:34.793
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --stop --sidp=0x21048 --id=0xdeadaffe --timestamp=1622804498]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:06:36.600
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --go --sidp=0x21048 --id=0xdeadaffe --timestamp=1622804498 /home/ti/HW_SW_Codesign/aufgabe4/software/aufgabe4/aufgabe4.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:07:59.218
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [2-1.6]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:07:59.417
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --stop --sidp=0x21048 --id=0xdeadaffe --timestamp=1622804498]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:08:01.030
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --go --sidp=0x21048 --id=0xdeadaffe --timestamp=1622804498 /home/ti/HW_SW_Codesign/aufgabe4/software/aufgabe4/aufgabe4.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:08:38.956
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [2-1.6]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:08:39.163
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --stop --sidp=0x21048 --id=0xdeadaffe --timestamp=1622804498]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:08:40.761
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --go --sidp=0x21048 --id=0xdeadaffe --timestamp=1622804498 /home/ti/HW_SW_Codesign/aufgabe4/software/aufgabe4/aufgabe4.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:09:18.245
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [2-1.6]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:09:18.452
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --stop --sidp=0x21048 --id=0xdeadaffe --timestamp=1622804498]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:09:20.049
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --go --sidp=0x21048 --id=0xdeadaffe --timestamp=1622804498 /home/ti/HW_SW_Codesign/aufgabe4/software/aufgabe4/aufgabe4.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:28:53.061
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [2-1.6]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:28:53.399
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --stop --sidp=0x21048 --id=0xdeadaffe --timestamp=1622804498]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:28:55.028
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --go --sidp=0x21048 --id=0xdeadaffe --timestamp=1622804498 /home/ti/HW_SW_Codesign/aufgabe4/software/aufgabe4/aufgabe4.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:29:57.752
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [2-1.6]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:29:57.950
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --stop --sidp=0x21048 --id=0xdeadaffe --timestamp=1622804498]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:29:59.562
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --go --sidp=0x21048 --id=0xdeadaffe --timestamp=1622804498 /home/ti/HW_SW_Codesign/aufgabe4/software/aufgabe4/aufgabe4.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:30:30.498
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [2-1.6]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:30:30.696
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --stop --sidp=0x21048 --id=0xdeadaffe --timestamp=1622804498]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:30:32.308
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --go --sidp=0x21048 --id=0xdeadaffe --timestamp=1622804498 /home/ti/HW_SW_Codesign/aufgabe4/software/aufgabe4/aufgabe4.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:31:38.828
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [2-1.6]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:31:39.019
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --stop --sidp=0x21048 --id=0xdeadaffe --timestamp=1622804498]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:31:40.641
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --go --sidp=0x21048 --id=0xdeadaffe --timestamp=1622804498 /home/ti/HW_SW_Codesign/aufgabe4/software/aufgabe4/aufgabe4.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:32:35.403
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [2-1.6]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:32:35.603
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --stop --sidp=0x21048 --id=0xdeadaffe --timestamp=1622804498]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:32:37.212
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --go --sidp=0x21048 --id=0xdeadaffe --timestamp=1622804498 /home/ti/HW_SW_Codesign/aufgabe4/software/aufgabe4/aufgabe4.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:33:15.927
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [2-1.6]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:33:16.143
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --stop --sidp=0x21048 --id=0xdeadaffe --timestamp=1622804498]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-04 13:33:17.764
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.6]' --device=1 --instance=0 --go --sidp=0x21048 --id=0xdeadaffe --timestamp=1622804498 /home/ti/HW_SW_Codesign/aufgabe4/software/aufgabe4/aufgabe4.elf]
