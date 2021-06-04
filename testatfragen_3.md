@@ -15,7 +15,7 @@ Oben rechts.
 
 4. Wie groß ist der benötigte Platz Ihrer Anwendung für die Segmente TEXT,DATA und BSS? Studieren Sie hierzu die Verwendung und Ausgabe des Hilfs-programmsnios2-elf-size.
 
-text: 73692
-data:  7232
-bss:    352
+text: 73692 byte (71 kByte)
+data:  7232 byte  (7 kByte)
+bss:    352 byte
 

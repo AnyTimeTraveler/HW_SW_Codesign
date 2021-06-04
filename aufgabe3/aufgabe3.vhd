@@ -105,4 +105,5 @@ BEGIN
 	LEDG(7 DOWNTO 0) <= pio_leds(7 downto 0);
 	LEDR(7 DOWNTO 0) <= pio_leds(15 downto 8);
 	DRAM_CLK		 <= sdram_clk;
+	LCD_ON <= '1';
 END structure;
