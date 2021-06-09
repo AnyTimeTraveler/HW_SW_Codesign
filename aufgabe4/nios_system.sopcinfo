@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="nios_system" kind="nios_system" version="1.0" fabric="QSYS">
  <!-- Format version 17.0 595 (Future versions may contain additional information.) -->
- <!-- 2021.06.04.13:01:38 -->
+ <!-- 2021.06.09.08:54:23 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1622804498</value>
+  <value>1623221663</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -362,9 +362,9 @@ parameters are a RESULT of the module parameters. -->
    </clockDomainMember>
    <clockDomainMember>
     <isBridge>false</isBridge>
-    <moduleName>sumad_cp</moduleName>
+    <moduleName>smuad_cp_0</moduleName>
     <slaveName>clock</slaveName>
-    <name>sumad_cp.clock</name>
+    <name>smuad_cp_0.clock</name>
    </clockDomainMember>
   </interface>
   <interface name="clk_reset" kind="reset_source" version="17.0">
@@ -2040,7 +2040,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="dataSlaveMapParam">
    <type>java.lang.String</type>
-   <value><![CDATA[<address-map><slave name='onchip_memory.s1' start='0x0' end='0x20000' type='altera_avalon_onchip_memory2.s1' /><slave name='cpu.debug_mem_slave' start='0x20800' end='0x21000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='performance_counter.control_slave' start='0x21000' end='0x21040' type='altera_avalon_performance_counter.control_slave' /><slave name='sumad_cp.sumad_cp' start='0x21040' end='0x21048' type='sumad_cp.sumad_cp' /><slave name='sysid.control_slave' start='0x21048' end='0x21050' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart.avalon_jtag_slave' start='0x21050' end='0x21058' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></value>
+   <value><![CDATA[<address-map><slave name='onchip_memory.s1' start='0x0' end='0x20000' type='altera_avalon_onchip_memory2.s1' /><slave name='cpu.debug_mem_slave' start='0x20800' end='0x21000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='performance_counter.control_slave' start='0x21000' end='0x21040' type='altera_avalon_performance_counter.control_slave' /><slave name='smuad_cp_0.avalon_slave_0' start='0x21040' end='0x21048' type='smuad_cp.avalon_slave_0' /><slave name='sysid.control_slave' start='0x21048' end='0x21050' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart.avalon_jtag_slave' start='0x21050' end='0x21058' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -2179,7 +2179,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="customInstSlavesSystemInfo">
    <type>java.lang.String</type>
-   <value><![CDATA[<info><slave name="my_dsp_instruction_0" baseAddress="0" addressSpan="1" clockCycleType="COMBINATORIAL" /></info>]]></value>
+   <value><![CDATA[<info><slave name="smuad_ci_0" baseAddress="0" addressSpan="1" clockCycleType="COMBINATORIAL" /></info>]]></value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -2716,6 +2716,14 @@ parameters are a RESULT of the module parameters. -->
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
+    <moduleName>smuad_cp_0</moduleName>
+    <slaveName>avalon_slave_0</slaveName>
+    <name>smuad_cp_0.avalon_slave_0</name>
+    <baseAddress>135232</baseAddress>
+    <span>8</span>
+   </memoryBlock>
+   <memoryBlock>
+    <isBridge>false</isBridge>
     <moduleName>sysid</moduleName>
     <slaveName>control_slave</slaveName>
     <name>sysid.control_slave</name>
@@ -2745,14 +2753,6 @@ parameters are a RESULT of the module parameters. -->
     <name>onchip_memory.s1</name>
     <baseAddress>0</baseAddress>
     <span>131072</span>
-   </memoryBlock>
-   <memoryBlock>
-    <isBridge>false</isBridge>
-    <moduleName>sumad_cp</moduleName>
-    <slaveName>sumad_cp</slaveName>
-    <name>sumad_cp.sumad_cp</name>
-    <baseAddress>135232</baseAddress>
-    <span>8</span>
    </memoryBlock>
   </interface>
   <interface name="instruction_master" kind="avalon_master" version="17.0">
@@ -3743,11 +3743,11 @@ parameters are a RESULT of the module parameters. -->
    </port>
    <customInstruction>
     <isBridge>false</isBridge>
-    <moduleName>smuad_ci</moduleName>
+    <moduleName>smuad_ci_0</moduleName>
     <slaveName>nios_custom_instruction_slave</slaveName>
-    <name>smuad_ci.nios_custom_instruction_slave</name>
+    <name>smuad_ci_0.nios_custom_instruction_slave</name>
     <opcodeNumber>0</opcodeNumber>
-    <opcodeMnemonic>my_dsp_instruction_0</opcodeMnemonic>
+    <opcodeMnemonic>smuad_ci_0</opcodeMnemonic>
    </customInstruction>
   </interface>
  </module>
@@ -5865,11 +5865,7 @@ parameters are a RESULT of the module parameters. -->
    </port>
   </interface>
  </module>
- <module
-   name="smuad_ci"
-   kind="my_dsp_instruction"
-   version="1.0"
-   path="smuad_ci">
+ <module name="smuad_ci_0" kind="smuad_ci" version="1.0" path="smuad_ci_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
   <parameter name="deviceFamily">
@@ -5997,7 +5993,7 @@ parameters are a RESULT of the module parameters. -->
    </port>
   </interface>
  </module>
- <module name="sumad_cp" kind="sumad_cp" version="1.0" path="sumad_cp">
+ <module name="smuad_cp_0" kind="smuad_cp" version="1.0" path="smuad_cp_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
   <parameter name="deviceFamily">
@@ -6106,7 +6102,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset_n</role>
    </port>
   </interface>
-  <interface name="sumad_cp" kind="avalon_slave" version="17.0">
+  <interface name="avalon_slave_0" kind="avalon_slave" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -6485,7 +6481,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMESTAMP</name>
-   <value>1622804498</value>
+   <value>1623221663</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.compatible</name>
@@ -6505,7 +6501,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.timestamp</name>
-   <value>1622804498</value>
+   <value>1623221663</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
@@ -6521,7 +6517,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="timestamp">
    <type>int</type>
-   <value>1622804498</value>
+   <value>1623221663</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -7030,6 +7026,57 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>avalon_jtag_slave</endConnectionPoint>
  </connection>
  <connection
+   name="cpu.data_master/smuad_cp_0.avalon_slave_0"
+   kind="avalon"
+   version="17.0"
+   start="cpu.data_master"
+   end="smuad_cp_0.avalon_slave_0">
+  <parameter name="arbitrationPriority">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="baseAddress">
+   <type>java.math.BigInteger</type>
+   <value>0x00021040</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="defaultConnection">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>cpu</startModule>
+  <startConnectionPoint>data_master</startConnectionPoint>
+  <endModule>smuad_cp_0</endModule>
+  <endConnectionPoint>avalon_slave_0</endConnectionPoint>
+ </connection>
+ <connection
    name="cpu.data_master/sysid.control_slave"
    kind="avalon"
    version="17.0"
@@ -7232,57 +7279,6 @@ parameters are a RESULT of the module parameters. -->
   <startConnectionPoint>data_master</startConnectionPoint>
   <endModule>onchip_memory</endModule>
   <endConnectionPoint>s1</endConnectionPoint>
- </connection>
- <connection
-   name="cpu.data_master/sumad_cp.sumad_cp"
-   kind="avalon"
-   version="17.0"
-   start="cpu.data_master"
-   end="sumad_cp.sumad_cp">
-  <parameter name="arbitrationPriority">
-   <type>int</type>
-   <value>1</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="baseAddress">
-   <type>java.math.BigInteger</type>
-   <value>0x00021040</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="defaultConnection">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>cpu</startModule>
-  <startConnectionPoint>data_master</startConnectionPoint>
-  <endModule>sumad_cp</endModule>
-  <endConnectionPoint>sumad_cp</endConnectionPoint>
  </connection>
  <connection
    name="cpu.instruction_master/cpu.debug_mem_slave"
@@ -7522,11 +7518,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>clk1</endConnectionPoint>
  </connection>
  <connection
-   name="clk.clk/sumad_cp.clock"
+   name="clk.clk/smuad_cp_0.clock"
    kind="clock"
    version="17.0"
    start="clk.clk"
-   end="sumad_cp.clock">
+   end="smuad_cp_0.clock">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -7545,7 +7541,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>clk</startModule>
   <startConnectionPoint>clk</startConnectionPoint>
-  <endModule>sumad_cp</endModule>
+  <endModule>smuad_cp_0</endModule>
   <endConnectionPoint>clock</endConnectionPoint>
  </connection>
  <connection
@@ -7584,14 +7580,14 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>irq</endConnectionPoint>
  </connection>
  <connection
-   name="cpu.custom_instruction_master/smuad_ci.nios_custom_instruction_slave"
+   name="cpu.custom_instruction_master/smuad_ci_0.nios_custom_instruction_slave"
    kind="nios_custom_instruction"
    version="17.0"
    start="cpu.custom_instruction_master"
-   end="smuad_ci.nios_custom_instruction_slave">
+   end="smuad_ci_0.nios_custom_instruction_slave">
   <parameter name="CIName">
    <type>java.lang.String</type>
-   <value>my_dsp_instruction_0</value>
+   <value>smuad_ci_0</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -7647,7 +7643,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>cpu</startModule>
   <startConnectionPoint>custom_instruction_master</startConnectionPoint>
-  <endModule>smuad_ci</endModule>
+  <endModule>smuad_ci_0</endModule>
   <endConnectionPoint>nios_custom_instruction_slave</endConnectionPoint>
  </connection>
  <connection
@@ -7759,11 +7755,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
-   name="clk.clk_reset/sumad_cp.reset"
+   name="clk.clk_reset/smuad_cp_0.reset"
    kind="reset"
    version="17.0"
    start="clk.clk_reset"
-   end="sumad_cp.reset">
+   end="smuad_cp_0.reset">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -7782,7 +7778,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>clk</startModule>
   <startConnectionPoint>clk_reset</startConnectionPoint>
-  <endModule>sumad_cp</endModule>
+  <endModule>smuad_cp_0</endModule>
   <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
@@ -7921,11 +7917,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
-   name="cpu.debug_reset_request/sumad_cp.reset"
+   name="cpu.debug_reset_request/smuad_cp_0.reset"
    kind="reset"
    version="17.0"
    start="cpu.debug_reset_request"
-   end="sumad_cp.reset">
+   end="smuad_cp_0.reset">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -7944,7 +7940,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>cpu</startModule>
   <startConnectionPoint>debug_reset_request</startConnectionPoint>
-  <endModule>sumad_cp</endModule>
+  <endModule>smuad_cp_0</endModule>
   <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
@@ -8112,10 +8108,10 @@ parameters are a RESULT of the module parameters. -->
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
-  <name>my_dsp_instruction</name>
+  <name>smuad_ci</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
-  <displayName>my_dsp_instruction</displayName>
+  <displayName>smuad_ci</displayName>
   <version>1.0</version>
  </plugin>
  <plugin>
@@ -8128,10 +8124,10 @@ parameters are a RESULT of the module parameters. -->
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
-  <name>sumad_cp</name>
+  <name>smuad_cp</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
-  <displayName>sumad_cp</displayName>
+  <displayName>smuad_cp</displayName>
   <version>1.0</version>
  </plugin>
  <plugin>

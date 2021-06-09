@@ -44,9 +44,9 @@ module nios_system (
 	wire  [31:0] cpu_custom_instruction_master_comb_xconnect_ci_master0_dataa;          // cpu_custom_instruction_master_comb_xconnect:ci_master0_dataa -> cpu_custom_instruction_master_comb_slave_translator0:ci_slave_dataa
 	wire         cpu_custom_instruction_master_comb_xconnect_ci_master0_writerc;        // cpu_custom_instruction_master_comb_xconnect:ci_master0_writerc -> cpu_custom_instruction_master_comb_slave_translator0:ci_slave_writerc
 	wire   [7:0] cpu_custom_instruction_master_comb_xconnect_ci_master0_n;              // cpu_custom_instruction_master_comb_xconnect:ci_master0_n -> cpu_custom_instruction_master_comb_slave_translator0:ci_slave_n
-	wire  [31:0] cpu_custom_instruction_master_comb_slave_translator0_ci_master_result; // smuad_ci:result -> cpu_custom_instruction_master_comb_slave_translator0:ci_master_result
-	wire  [31:0] cpu_custom_instruction_master_comb_slave_translator0_ci_master_datab;  // cpu_custom_instruction_master_comb_slave_translator0:ci_master_datab -> smuad_ci:data_b
-	wire  [31:0] cpu_custom_instruction_master_comb_slave_translator0_ci_master_dataa;  // cpu_custom_instruction_master_comb_slave_translator0:ci_master_dataa -> smuad_ci:data_a
+	wire  [31:0] cpu_custom_instruction_master_comb_slave_translator0_ci_master_result; // smuad_ci_0:result -> cpu_custom_instruction_master_comb_slave_translator0:ci_master_result
+	wire  [31:0] cpu_custom_instruction_master_comb_slave_translator0_ci_master_datab;  // cpu_custom_instruction_master_comb_slave_translator0:ci_master_datab -> smuad_ci_0:data_b
+	wire  [31:0] cpu_custom_instruction_master_comb_slave_translator0_ci_master_dataa;  // cpu_custom_instruction_master_comb_slave_translator0:ci_master_dataa -> smuad_ci_0:data_a
 	wire  [31:0] cpu_data_master_readdata;                                              // mm_interconnect_0:cpu_data_master_readdata -> cpu:d_readdata
 	wire         cpu_data_master_waitrequest;                                           // mm_interconnect_0:cpu_data_master_waitrequest -> cpu:d_waitrequest
 	wire         cpu_data_master_debugaccess;                                           // cpu:debug_mem_slave_debugaccess_to_roms -> mm_interconnect_0:cpu_data_master_debugaccess
@@ -66,6 +66,11 @@ module nios_system (
 	wire         mm_interconnect_0_jtag_uart_avalon_jtag_slave_read;                    // mm_interconnect_0:jtag_uart_avalon_jtag_slave_read -> jtag_uart:av_read_n
 	wire         mm_interconnect_0_jtag_uart_avalon_jtag_slave_write;                   // mm_interconnect_0:jtag_uart_avalon_jtag_slave_write -> jtag_uart:av_write_n
 	wire  [31:0] mm_interconnect_0_jtag_uart_avalon_jtag_slave_writedata;               // mm_interconnect_0:jtag_uart_avalon_jtag_slave_writedata -> jtag_uart:av_writedata
+	wire         mm_interconnect_0_smuad_cp_0_avalon_slave_0_chipselect;                // mm_interconnect_0:smuad_cp_0_avalon_slave_0_chipselect -> smuad_cp_0:chipselect
+	wire  [31:0] mm_interconnect_0_smuad_cp_0_avalon_slave_0_readdata;                  // smuad_cp_0:readdata -> mm_interconnect_0:smuad_cp_0_avalon_slave_0_readdata
+	wire   [0:0] mm_interconnect_0_smuad_cp_0_avalon_slave_0_address;                   // mm_interconnect_0:smuad_cp_0_avalon_slave_0_address -> smuad_cp_0:address
+	wire         mm_interconnect_0_smuad_cp_0_avalon_slave_0_write;                     // mm_interconnect_0:smuad_cp_0_avalon_slave_0_write -> smuad_cp_0:write_n
+	wire  [31:0] mm_interconnect_0_smuad_cp_0_avalon_slave_0_writedata;                 // mm_interconnect_0:smuad_cp_0_avalon_slave_0_writedata -> smuad_cp_0:writedata
 	wire  [31:0] mm_interconnect_0_sysid_control_slave_readdata;                        // sysid:readdata -> mm_interconnect_0:sysid_control_slave_readdata
 	wire   [0:0] mm_interconnect_0_sysid_control_slave_address;                         // mm_interconnect_0:sysid_control_slave_address -> sysid:address
 	wire  [31:0] mm_interconnect_0_performance_counter_control_slave_readdata;          // performance_counter:readdata -> mm_interconnect_0:performance_counter_control_slave_readdata
@@ -88,14 +93,9 @@ module nios_system (
 	wire         mm_interconnect_0_onchip_memory_s1_write;                              // mm_interconnect_0:onchip_memory_s1_write -> onchip_memory:write
 	wire  [31:0] mm_interconnect_0_onchip_memory_s1_writedata;                          // mm_interconnect_0:onchip_memory_s1_writedata -> onchip_memory:writedata
 	wire         mm_interconnect_0_onchip_memory_s1_clken;                              // mm_interconnect_0:onchip_memory_s1_clken -> onchip_memory:clken
-	wire         mm_interconnect_0_sumad_cp_sumad_cp_chipselect;                        // mm_interconnect_0:sumad_cp_sumad_cp_chipselect -> sumad_cp:chipselect
-	wire  [31:0] mm_interconnect_0_sumad_cp_sumad_cp_readdata;                          // sumad_cp:readdata -> mm_interconnect_0:sumad_cp_sumad_cp_readdata
-	wire   [0:0] mm_interconnect_0_sumad_cp_sumad_cp_address;                           // mm_interconnect_0:sumad_cp_sumad_cp_address -> sumad_cp:address
-	wire         mm_interconnect_0_sumad_cp_sumad_cp_write;                             // mm_interconnect_0:sumad_cp_sumad_cp_write -> sumad_cp:write_n
-	wire  [31:0] mm_interconnect_0_sumad_cp_sumad_cp_writedata;                         // mm_interconnect_0:sumad_cp_sumad_cp_writedata -> sumad_cp:writedata
 	wire         irq_mapper_receiver0_irq;                                              // jtag_uart:av_irq -> irq_mapper:receiver0_irq
 	wire  [31:0] cpu_irq_irq;                                                           // irq_mapper:sender_irq -> cpu:irq
-	wire         rst_controller_reset_out_reset;                                        // rst_controller:reset_out -> [cpu:reset_n, irq_mapper:reset, jtag_uart:rst_n, mm_interconnect_0:cpu_reset_reset_bridge_in_reset_reset, onchip_memory:reset, performance_counter:reset_n, rst_translator:in_reset, sumad_cp:reset_n, sysid:reset_n]
+	wire         rst_controller_reset_out_reset;                                        // rst_controller:reset_out -> [cpu:reset_n, irq_mapper:reset, jtag_uart:rst_n, mm_interconnect_0:cpu_reset_reset_bridge_in_reset_reset, onchip_memory:reset, performance_counter:reset_n, rst_translator:in_reset, smuad_cp_0:reset_n, sysid:reset_n]
 	wire         rst_controller_reset_out_reset_req;                                    // rst_controller:reset_req -> [cpu:reset_req, onchip_memory:reset_req, rst_translator:reset_req_in]
 	wire         cpu_debug_reset_request_reset;                                         // cpu:debug_reset_request -> rst_controller:reset_in1
 
@@ -179,20 +179,20 @@ module nios_system (
 		.writedata     (mm_interconnect_0_performance_counter_control_slave_writedata)      //              .writedata
 	);
 
-	my_dsp_instruction smuad_ci (
+	my_dsp_instruction smuad_ci_0 (
 		.data_b (cpu_custom_instruction_master_comb_slave_translator0_ci_master_datab),  // nios_custom_instruction_slave.datab
 		.result (cpu_custom_instruction_master_comb_slave_translator0_ci_master_result), //                              .result
 		.data_a (cpu_custom_instruction_master_comb_slave_translator0_ci_master_dataa)   //                              .dataa
 	);
 
-	smuad_cp sumad_cp (
-		.clk        (clk_clk),                                        //    clock.clk
-		.reset_n    (~rst_controller_reset_out_reset),                //    reset.reset_n
-		.chipselect (mm_interconnect_0_sumad_cp_sumad_cp_chipselect), // sumad_cp.chipselect
-		.write_n    (~mm_interconnect_0_sumad_cp_sumad_cp_write),     //         .write_n
-		.address    (mm_interconnect_0_sumad_cp_sumad_cp_address),    //         .address
-		.writedata  (mm_interconnect_0_sumad_cp_sumad_cp_writedata),  //         .writedata
-		.readdata   (mm_interconnect_0_sumad_cp_sumad_cp_readdata)    //         .readdata
+	smuad_cp smuad_cp_0 (
+		.clk        (clk_clk),                                                //          clock.clk
+		.reset_n    (~rst_controller_reset_out_reset),                        //          reset.reset_n
+		.chipselect (mm_interconnect_0_smuad_cp_0_avalon_slave_0_chipselect), // avalon_slave_0.chipselect
+		.write_n    (~mm_interconnect_0_smuad_cp_0_avalon_slave_0_write),     //               .write_n
+		.address    (mm_interconnect_0_smuad_cp_0_avalon_slave_0_address),    //               .address
+		.writedata  (mm_interconnect_0_smuad_cp_0_avalon_slave_0_writedata),  //               .writedata
+		.readdata   (mm_interconnect_0_smuad_cp_0_avalon_slave_0_readdata)    //               .readdata
 	);
 
 	nios_system_sysid sysid (
@@ -375,11 +375,11 @@ module nios_system (
 		.performance_counter_control_slave_readdata      (mm_interconnect_0_performance_counter_control_slave_readdata),      //                                  .readdata
 		.performance_counter_control_slave_writedata     (mm_interconnect_0_performance_counter_control_slave_writedata),     //                                  .writedata
 		.performance_counter_control_slave_begintransfer (mm_interconnect_0_performance_counter_control_slave_begintransfer), //                                  .begintransfer
-		.sumad_cp_sumad_cp_address                       (mm_interconnect_0_sumad_cp_sumad_cp_address),                       //                 sumad_cp_sumad_cp.address
-		.sumad_cp_sumad_cp_write                         (mm_interconnect_0_sumad_cp_sumad_cp_write),                         //                                  .write
-		.sumad_cp_sumad_cp_readdata                      (mm_interconnect_0_sumad_cp_sumad_cp_readdata),                      //                                  .readdata
-		.sumad_cp_sumad_cp_writedata                     (mm_interconnect_0_sumad_cp_sumad_cp_writedata),                     //                                  .writedata
-		.sumad_cp_sumad_cp_chipselect                    (mm_interconnect_0_sumad_cp_sumad_cp_chipselect),                    //                                  .chipselect
+		.smuad_cp_0_avalon_slave_0_address               (mm_interconnect_0_smuad_cp_0_avalon_slave_0_address),               //         smuad_cp_0_avalon_slave_0.address
+		.smuad_cp_0_avalon_slave_0_write                 (mm_interconnect_0_smuad_cp_0_avalon_slave_0_write),                 //                                  .write
+		.smuad_cp_0_avalon_slave_0_readdata              (mm_interconnect_0_smuad_cp_0_avalon_slave_0_readdata),              //                                  .readdata
+		.smuad_cp_0_avalon_slave_0_writedata             (mm_interconnect_0_smuad_cp_0_avalon_slave_0_writedata),             //                                  .writedata
+		.smuad_cp_0_avalon_slave_0_chipselect            (mm_interconnect_0_smuad_cp_0_avalon_slave_0_chipselect),            //                                  .chipselect
 		.sysid_control_slave_address                     (mm_interconnect_0_sysid_control_slave_address),                     //               sysid_control_slave.address
 		.sysid_control_slave_readdata                    (mm_interconnect_0_sysid_control_slave_readdata)                     //                                  .readdata
 	);
