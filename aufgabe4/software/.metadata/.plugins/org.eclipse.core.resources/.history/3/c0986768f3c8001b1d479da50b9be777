@@ -77,9 +77,8 @@ void test_performance(uint8_t perf_id, uint32_t repeat_count, char* name, smuad_
 
 
 inline uint32_t smuad_ci(uint32_t a, uint32_t b) {
-	return ALT_CI_SMUAD_CI_0(a, b);
+	return ALT_CI_MY_DSP_INSTRUCTION_0(a, b);
 }
-
 
 inline uint32_t smuad_cpu(uint32_t a, uint32_t b) {
 	union MyInt {
@@ -97,7 +96,7 @@ inline uint32_t smuad_cpu(uint32_t a, uint32_t b) {
 }
 
 inline uint32_t smuad_cp(uint32_t a, uint32_t b) {
-	IOWR_32DIRECT(SMUAD_CP_BASE, 0, a);
-	IOWR_32DIRECT(SMUAD_CP_BASE, 4, b);
-	return IORD_32DIRECT(SMUAD_CP_BASE, 0);
+	IOWR_32DIRECT(SUMAD_CP_BASE, 0, a);
+	IOWR_32DIRECT(SUMAD_CP_BASE, 4, b);
+	return IORD_32DIRECT(SUMAD_CP_BASE, 0);
 }

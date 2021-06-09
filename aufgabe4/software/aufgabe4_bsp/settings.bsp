@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Jun 4, 2021 1:03:23 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1622804603646</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Jun 9, 2021 9:33:29 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1623224009291</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/ti/HW_SW_Codesign/aufgabe4/software/aufgabe4_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../nios_system.sopcinfo</SopcDesignFile>
@@ -911,7 +911,7 @@
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>sumad_cp</slaveDescriptor>
+                <slaveDescriptor>smuad_cp</slaveDescriptor>
                 <addressRange>0x00021040 - 0x00021047</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>

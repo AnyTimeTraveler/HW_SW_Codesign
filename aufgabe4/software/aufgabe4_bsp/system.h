@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'nios_system'
  * SOPC Builder design path: ../../nios_system.sopcinfo
  *
- * Generated: Fri Jun 04 13:03:24 CEST 2021
+ * Generated: Wed Jun 09 09:33:29 CEST 2021
  */
 
 /*
@@ -133,8 +133,8 @@
  *
  */
 
-#define ALT_CI_MY_DSP_INSTRUCTION_0(A,B) __builtin_custom_inii(ALT_CI_MY_DSP_INSTRUCTION_0_N,(A),(B))
-#define ALT_CI_MY_DSP_INSTRUCTION_0_N 0x0
+#define ALT_CI_SMUAD_CI_0(A,B) __builtin_custom_inii(ALT_CI_SMUAD_CI_0_N,(A),(B))
+#define ALT_CI_SMUAD_CI_0_N 0x0
 
 
 /*
@@ -147,8 +147,8 @@
 #define __ALTERA_AVALON_PERFORMANCE_COUNTER
 #define __ALTERA_AVALON_SYSID_QSYS
 #define __ALTERA_NIOS2_GEN2
-#define __MY_DSP_INSTRUCTION
-#define __SUMAD_CP
+#define __SMUAD_CI
+#define __SMUAD_CP
 
 
 /*
@@ -261,17 +261,17 @@
 
 
 /*
- * sumad_cp configuration
+ * smuad_cp configuration
  *
  */
 
-#define ALT_MODULE_CLASS_sumad_cp sumad_cp
-#define SUMAD_CP_BASE 0x21040
-#define SUMAD_CP_IRQ -1
-#define SUMAD_CP_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define SUMAD_CP_NAME "/dev/sumad_cp"
-#define SUMAD_CP_SPAN 8
-#define SUMAD_CP_TYPE "sumad_cp"
+#define ALT_MODULE_CLASS_smuad_cp smuad_cp
+#define SMUAD_CP_BASE 0x21040
+#define SMUAD_CP_IRQ -1
+#define SMUAD_CP_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define SMUAD_CP_NAME "/dev/smuad_cp"
+#define SMUAD_CP_SPAN 8
+#define SMUAD_CP_TYPE "smuad_cp"
 
 
 /*
@@ -286,7 +286,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1622804498
+#define SYSID_TIMESTAMP 1623223802
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */
