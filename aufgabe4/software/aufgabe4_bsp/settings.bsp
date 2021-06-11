@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Jun 9, 2021 9:33:29 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1623224009291</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Jun 11, 2021 10:11:27 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1623399087604</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/ti/HW_SW_Codesign/aufgabe4/software/aufgabe4_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../nios_system.sopcinfo</SopcDesignFile>

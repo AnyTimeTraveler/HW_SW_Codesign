@@ -1,9 +1,9 @@
-09:34:04 **** Incremental Build of configuration Nios II for project aufgabe4 ****
+10:30:54 **** Incremental Build of configuration Nios II for project aufgabe4 ****
 make all 
 Info: Building ../aufgabe4_bsp/
 make --no-print-directory -C ../aufgabe4_bsp/
 [BSP build complete]
 [aufgabe4 build complete]
 
-09:34:04 Build Finished (took 510ms)
+10:30:55 Build Finished (took 464ms)
 

@@ -4,13 +4,13 @@
 	CI : Schnellste, da Harware-Multiplikation schnell ist
 	CP : Nur ein Wenig langsamer als CI, da letztendlich auch Hardware-Multiplikation ausgefuehrt wird, aber die Parameter ueber den System-Bus muessen
 
-2. Warum ist die Taktrate des SoPC in dem vorliegenden System auf maximal50 MHz begrenzt?
+2. Warum ist die Taktrate des SoPC in dem vorliegenden System auf maximal 50 MHz begrenzt?
 
 	?
 
 3. Wie viele Embedded Multiplierdes FPGA werden für die Custom Instruction SMUAD verwendet?
 
-	 Es werden vier Embedded Multiplierdes verwendet 
+	 Es werden vier Embedded Multiplierdes verwendet.
 
 4. Welche Standard-CI-Typen können durch das Steuerwerk des Nios verwaltetwerden? Um welchen Typ handelt es sich in unserer Übung?
 
@@ -34,5 +34,21 @@
 
 7. Welchen Einfluss haben unterschiedliche Optimierungsstufen des C-Compilersauf die Performanz der vorgestellten SMUAD-Implementierungen?
 
-	
+O0:
+	CI : 0.45570
+	CPU: 2.57916
+	CP : 0.57800
+O1:
+	CI : 0.09800
+	CPU: 2.23306
+	CP : 0.19600
+O2:
+	CI : 0.09800
+	CPU: 2.23306
+	CP : 0.19600
+O3:
+	CI : 0.04200
+	CPU: 1.96906
+	CP : 0.09800
+
 
